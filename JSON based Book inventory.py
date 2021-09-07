@@ -21,7 +21,7 @@ while 1:
             approval=input("Type YES to proceed: ")
             if approval=='YES':
                 print("Successfully purchased!\n")
-                records[Id]['qn'] = records[Id]['qn'] - Quant
+                records[Id]['qn'] = str(int(records[Id]['qn']) - Quant)
 
 
                 js = json.dumps(records)
@@ -44,7 +44,7 @@ while 1:
     else:
         pwd=input("Enter Admin password(admin@123): ")
         if pwd!='admin@123':
-            print("WRONG PASSWORD")
+            print("WRONG PASSWORD\n")
         else:
             prod_id = str(input("Enter product id: "))
             if prod_id in records:
